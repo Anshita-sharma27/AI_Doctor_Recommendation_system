@@ -2,14 +2,15 @@ from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 import sqlite3
 import os
+import sys
 import json
 import joblib
 import pandas as pd
 from datetime import datetime
 
-from utils.doctor_mapping import doctor_mapping
-from utils.pdf_generator import generate_pdf
-from utils.excel_export import export_reports_to_excel
+from backend utils.doctor_mapping import doctor_mapping
+from backend utils.pdf_generator import generate_pdf
+from  backend utils.excel_export import export_reports_to_excel
 
 app = Flask(__name__)
 CORS(app)
