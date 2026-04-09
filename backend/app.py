@@ -761,8 +761,8 @@ def uploaded_doctor_file(filename):
 # -----------------------------
 # Run
 # -----------------------------
-if __name__ == "__main__":
+if _name_ == "_main_":
     init_db()
     print("🚀 Backend starting...")
     print("📂 Using DB:", DB_PATH)
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
